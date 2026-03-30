@@ -1,0 +1,63 @@
+/* General Page Styling */
+html, body {
+    font-size: 16px;
+}
+
+/* Container */
+#container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+}
+
+/* Paragraphs */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+/* Intro Paragraph */
+.intro {
+    text-indent: 2em;
+}
+
+/* Sentence Class */
+.sentence {
+    font-style: italic;
+}
+
+/* Address */
+address {
+    text-align: center;
+}
+
+/* Link Styling */
+a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
+
+/* Visited Link */
+a:visited {
+    color: #2E1F47;
+}
