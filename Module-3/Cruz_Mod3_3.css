@@ -1,0 +1,62 @@
+/* Main container */
+#container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+}
+
+/* Side-by-side divs */
+.left, .right {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Headings */
+h3 {
+    font-weight: 500;
+}
+
+/* Lists */
+ol, ul {
+    font-weight: 300;
+    padding: 10px;
+}
+
+/* Ordered list styling */
+.left h3, .left ol {
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+.left ol {
+    list-style-position: inside;
+}
+
+/* Unordered list styling */
+.right h3, .right ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+}
+
+.right ul {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+/* Bottom div */
+.bottom {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Link hover */
+a:hover {
+    text-decoration: underline;
+}
