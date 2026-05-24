@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #f6f9fc, #dbeafe);
+            margin: 0;
+            padding: 0;
+            color: #1f2937;
+        }
+
+        header {
+            background-color: #0f172a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .instructions {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .click-card {
+            width: 220px;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            background-color: #f8fafc;
+        }
+
+        .click-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-color: #2563eb;
+        }
+
+        .click-card img {
+            width: 180px;
+            height: 180px;
+        }
+
+        #messageBox {
+            min-height: 80px;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #e0f2fe;
+            color: #075985;
+            border: 2px solid #38bdf8;
+        }
+
+        .footer-link {
+            margin-top: 30px;
+        }
+
+        .footer-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function changeDisplay(choice) {
+            const messageBox = document.getElementById("messageBox");
+            const pageBody = document.body;
+
+            if (choice === "rocket") {
+                messageBox.innerHTML = "🚀 You launched the rocket! Keep aiming higher in web development.";
+                messageBox.style.backgroundColor = "#fee2e2";
+                messageBox.style.color = "#991b1b";
+                messageBox.style.borderColor = "#ef4444";
+                pageBody.style.background = "linear-gradient(135deg, #ffe4e6, #fecaca)";
+            } else if (choice === "computer") {
+                messageBox.innerHTML = "💻 You selected the computer! JavaScript makes web pages interactive.";
+                messageBox.style.backgroundColor = "#dcfce7";
+                messageBox.style.color = "#166534";
+                messageBox.style.borderColor = "#22c55e";
+                pageBody.style.background = "linear-gradient(135deg, #dcfce7, #bbf7d0)";
+            } else if (choice === "star") {
+                messageBox.innerHTML = "⭐ You clicked the star! Great work completing Assignment 10.3.";
+                messageBox.style.backgroundColor = "#fef9c3";
+                messageBox.style.color = "#854d0e";
+                messageBox.style.borderColor = "#eab308";
+                pageBody.style.background = "linear-gradient(135deg, #fef3c7, #fde68a)";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    </header>
+
+    <div class="container">
+        <p class="instructions">Click one of the original graphics below to change the message and page display.</p>
+
+        <div class="image-row">
+            <div class="click-card" onclick="changeDisplay('rocket')">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' rx='25' fill='%23dbeafe'/><path d='M105 25 C145 45 145 100 110 130 L70 90 C80 55 90 35 105 25 Z' fill='%23ef4444'/><circle cx='107' cy='69' r='14' fill='%23bfdbfe' stroke='%231e3a8a' stroke-width='4'/><path d='M70 90 L45 115 L76 124 Z' fill='%231e40af'/><path d='M110 130 L85 155 L76 124 Z' fill='%231e40af'/><path d='M71 130 C55 145 52 162 52 162 C52 162 71 159 87 143 Z' fill='%23f97316'/><path d='M78 137 C68 148 66 158 66 158 C66 158 78 155 90 144 Z' fill='%23facc15'/></svg>" alt="Original rocket graphic">
+                <h3>Rocket</h3>
+            </div>
+
+            <div class="click-card" onclick="changeDisplay('computer')">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' rx='25' fill='%23dcfce7'/><rect x='40' y='45' width='120' height='82' rx='8' fill='%231f2937'/><rect x='50' y='55' width='100' height='58' rx='4' fill='%2338bdf8'/><rect x='85' y='127' width='30' height='22' fill='%236b7280'/><rect x='65' y='149' width='70' height='10' rx='5' fill='%23374151'/><text x='100' y='92' font-size='22' text-anchor='middle' fill='white' font-family='Arial'>JS</text></svg>" alt="Original computer graphic">
+                <h3>Computer</h3>
+            </div>
+
+            <div class="click-card" onclick="changeDisplay('star')">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' rx='25' fill='%23fef9c3'/><polygon points='100,28 119,75 170,78 131,111 145,160 100,133 55,160 69,111 30,78 81,75' fill='%23facc15' stroke='%23854d0e' stroke-width='5'/><circle cx='78' cy='88' r='6' fill='%23854d0e'/><circle cx='122' cy='88' r='6' fill='%23854d0e'/><path d='M78 112 Q100 132 122 112' fill='none' stroke='%23854d0e' stroke-width='6' stroke-linecap='round'/></svg>" alt="Original star graphic">
+                <h3>Star</h3>
+            </div>
+        </div>
+
+        <div id="messageBox">Click an image to see the page change.</div>
+
+        <div class="footer-link">
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+    </div>
+</body>
+</html>
